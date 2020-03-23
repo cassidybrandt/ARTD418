@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+            <script src="https://molleindustria.github.io/p5.play/lib/p5.play.js"></script>
+            <script src="myscript.js"></script>
+        <style>
+            body {margin:0;}
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="Sugarjones_Logo.gif" alt="Logo" style="width : 100px">
+  </a>
+
+  
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#gallery">Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#locations">Locations and Hours</a>
+      </li>
+    </ul>
+
+ 
+</nav>
+
+<div class="container" style="padding-top: 50px">
+  <!--  FIRST ROW     -->
+  <div class="row">
+    <div class="col-sm">
+      <h3>Baked Fresh Daily</h3>
+      <p>Sugarjones, inc was founded in 2011 by Kathy Pomerene, avid baker and creative dreamer.<br>
+
+Our first location opened as a
+
+cake shop and small retail bakery on december 10th, 2011 on rural Street in Rockford, il. Word got out that our stuff is good! Now we have 2 locations in the Rockford area!<br>
+
+We take great pride in the fact that we are the only cupcake bakery in the area who bakes fresh daily (our freezer is pretty empty!) using only the best ingredients available to us. We also love to use local vendors for specialty items when we can.<br>
+
+One bite and you can tell that we are making the world a better place, one cupcake at a time.</p>
+    </div>
+    <div class="col-sm">
+      <img src="photos/Eggs%20and%20bowl.gif" alt="cover" style="width : 100%">
+    </div>
+  </div>
+
+  <!--  SECOND ROW     -->
+  <div class="row">
+    <div class="col-sm">
+      <div id="donut_canvas"></div>
+    </div>
+    <div class="col-sm">
+        <div id="cupcake_canvas"></div>
+    </div>
+    <div class="col-sm">
+        <div id="cake_canvas"></div>
+    </div>
+  </div>
+
+  <!--  THIRD ROW     -->
+  <div class="row" style="padding: 20px" id="gallery">
+    <div class="col-sm">
+        <div id="slideshow">
+            <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="right" onclick="plusDivs(1)">&#10095;</button>
+            <img class="mySlides" src="photos/cupcakes.png" width="300px">
+            <img class="mySlides" src="photos/cupcakes2.png" width="300px">
+            <img class="mySlides" src="photos/weddingcake.png" width="300px">
+                <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+                function plusDivs(n) {
+                    showDivs(slideIndex += n);
+                }
+                function showDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    if (n > x.length) {slideIndex = 1}    
+                    if (n < 1) {slideIndex = x.length}
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";  
+
+                    }
+                    x[slideIndex-1].style.display = "block";  
+                }
+                </script>
+        </div>
+      </div>
+    <div class="col-sm">
+      <h3>Events</h3>
+      <ul>
+        <li>Birthdays</li>
+        <li>Weddings</li>
+        <li>Anniversaries</li>
+        <li>Gender Reveals</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!--  FOURTH ROW     -->
+  <div class="row" id="locations">
+      <div class="text-center">
+        <h3>Locations and Hours</h3>
+      </div>
+  </div>
+
+  <!--  FIFTH ROW     -->
+  <div class="row" style="padding: 20px">
+    <div class="col-sm-4">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2952.5471158281075!2d-89.04328258505463!3d42.266843079193244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8808bf1ead3924f9%3A0x435e826b5edcccb6!2s3600%20E%20State%20St%2C%20Rockford%2C%20IL%2061108!5e0!3m2!1sen!2sus!4v1584900933061!5m2!1sen!2sus" width="200" height="150" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    <div class="col-sm-8">
+      <h3>Fairview Plaza</h3>
+      <p><b>Address:</b> 3600 E State St.<br>
+        Suite 1A Rockford, Illinois 61108<br>
+        <b>Phone Number:</b> 815-708-0801<br>
+        <b>Hours:</b><br>Tuesday-Friday: 7AM-6PM<br> Saturday: 8AM-2PM</p>
+    </div>
+  </div>
+
+  <!--  SIXTH ROW     -->
+  <div class="row" style="padding: 20px">
+    <div class="col-sm-4">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.0857117544806!2d-88.99550488505254!3d42.319370579189595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8808bbdb428e043d%3A0xb13beb3f912ce46c!2s6336%20E%20Riverside%20Blvd%2C%20Loves%20Park%2C%20IL%2061111!5e0!3m2!1sen!2sus!4v1584901125957!5m2!1sen!2sus" width="200" height="150" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <div class="col-sm-8">
+      <h3>Riverside Blvd.</h3>
+      <p><b>Address:</b> 6336 E Riverside Blvd<br>
+     Loves Park, Illinois 61111<br>
+        <b>Phone Number:</b> 815-708-0801<br>
+        <b>Hours:</b>Tuesday-Saturday: 11AM-6PM</p>
+    </div>
+  </div>
+
+</div>
+
+    </body>
+</html>
